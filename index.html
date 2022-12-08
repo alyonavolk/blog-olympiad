@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Blog</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="./img/logo.svg" alt="">
+        </div>
+        <nav class="nav">
+            <ul class="nav__items list-reset">
+                <li class="nav__item"><a href="#about">Обо мне</a></li>
+                <li class="nav__item"><a href="#direction">Направление</a></li>
+                <li class="nav__item"><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hero container">
+            <div class="hero_left">
+                <div class="hero__message">
+                    <p class="message__descr_hello">
+                        Привет,
+                    </p>
+                    <h1 class="message__title">
+                        меня зовут <br> Имя Фамилия
+                    </h1>
+                    <p class="message__descr">
+                        Я преподаватель!
+                    </p>
+                </div>
+                <div class="message__socIcon">
+                    <img src="./img/Google Plus.svg" alt="">
+                    <img src="./img/VK com.svg" alt="">
+                    <img src="./img/WhatsApp.svg" alt="">
+                </div>
+            </div>
+            <div class="hero_right">
+                <img src="./img/pana.png" alt="">
+            </div>
+        </section>
+        <div class="scroll">
+            <img src="./img/scroll.svg" alt="">
+        </div>
+        <section class="about container" id="about">
+            <h2 class="main__title">Обо мне</h2>
+            <div class="about__content">
+                <div class="about__left">
+                    <div><img src="./img/foto.png" alt=""></div>
+                    <p class="main__descr">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                        et magnis dis parturient montes, nascetur ridiculus mus.
+                    </p>
+                </div>
+                <div class="about__right">
+                    <button class="accordion"><p class="accordion_num">1</p><p class='accordion_title'>Должность</p></button>
+                    <div class="accordion__item">
+                        <p class="main__descr">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <button class="accordion"><p class="accordion_num">2</p><p class='accordion_title'>Место работы</p></button>
+                    <div class="accordion__item">
+                        <p class="main__descr">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <button class="accordion"><p class="accordion_num">3</p><p class='accordion_title'>Образование</p></button>
+                    <div class="accordion__item">
+                        <p class="main__descr">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="direction container" id="direction">
+            <h2 class="main__title">Направление</h2>
+            <div class="direction__content">
+                <p class="main__descr">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                    et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+                <h2 class="direction__title">Мои достижения</h2>
+                <div class="achievements">
+                    <a class="arrow arrow__left" onclick="plusSlides(-1)"><img src="./img/arrow.svg"></a>
+                    <div class="achievements__block fade">
+                        <div class="achievements__content">
+                            <h3 class="block__title">
+                                Диплом
+                            </h3>
+                            <p class="main__descr block__descr">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                                et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class="block__capt">
+                                &mdash; Имя Фамилия <br> 11.11.2019
+                            </p>
+                        </div>
+                    </div>
+                    <div class="achievements__block fade">
+                        <div class="achievements__content">
+                            <h3 class="block__title">
+                                Благодарственное письмо
+                            </h3>
+                            <p class="main__descr block__descr">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus 
+                                et magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                            <p class="block__capt">
+                                &mdash; Имя Фамилия <br> 14.11.2020
+                            </p>
+                        </div>
+                    </div>
+                    <a class="arrow" onclick="plusSlides(1)"><img src="./img/arrow.svg"></a>
+                </div>
+            </div>
+        </section>
+        <script src="./js/main.js"></script>
+        <img class="separator" src="./img/separator.svg" alt="">
+        <section class="contact" id="contact">
+            <p class="main__descr">Ваш преподаватель - Фамилия Имя</p>
+            <p class="contact__tel">+7 (000) 111 00-00</p>
+            <p class="contact__email">abc@gmail.com</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <img src="./img/logo.svg" alt="">
+            <p class="footer__year">&copy; 2022</p>
+        </div>
+        <div class="footer__socIcon">
+            <img class="footer__img" src="./img/Google Plus.svg" alt="">
+            <img class="footer__img" src="./img/VK com.svg" alt="">
+            <img class="footer__img" src="./img/WhatsApp.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>
