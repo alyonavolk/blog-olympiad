@@ -1,3 +1,9 @@
+/* Плавное появление объектов на странице в брузере */
+window.onload = () => {
+  document.querySelector('body').classList.remove('hidden');
+}
+
+/* анимация аккордеон в секции обо мне */
 const acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
@@ -14,6 +20,7 @@ for (let i = 0; i < acc.length; i++) {
     });
 }
 
+/* анимация перелистывания в блоке достижения */
 let slideIndex = 1;
 showSlides(slideIndex);
 

@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    <script defer src="./js/main.js"></script>
     <title>Blog</title>
 </head>
-<body>
+<body class="hidden">
     <header class="header">
         <div class="header__logo">
             <img src="./img/logo.svg" alt="">
@@ -25,7 +26,7 @@
     </header>
     <main class="main">
         <section class="hero container">
-            <div class="hero_left">
+            <div class="hero__content">
                 <div class="hero__message">
                     <p class="message__descr_hello">
                         Привет,
@@ -43,12 +44,14 @@
                     <img src="./img/WhatsApp.svg" alt="">
                 </div>
             </div>
-            <div class="hero_right">
-                <img src="./img/pana.png" alt="">
+            <div class="hero__image">
+                ⠀
             </div>
         </section>
         <div class="scroll">
-            <img src="./img/scroll.svg" alt="">
+            <a href="#contact">
+                <img src="./img/scroll.svg" alt="">
+            </a>
         </div>
         <section class="about container" id="about">
             <h2 class="main__title">Обо мне</h2>
@@ -122,8 +125,9 @@
                 </div>
             </div>
         </section>
-        <script src="./js/main.js"></script>
-        <img class="separator" src="./img/separator.svg" alt="">
+        <div class="separator">
+            <img src="./img/separator.svg" alt="">
+        </div>
         <section class="contact" id="contact">
             <p class="main__descr">Ваш преподаватель - Фамилия Имя</p>
             <p class="contact__tel">+7 (000) 111 00-00</p>
@@ -133,7 +137,7 @@
     <footer class="footer">
         <div class="footer__logo">
             <img src="./img/logo.svg" alt="">
-            <p class="footer__year">&copy; 2022</p>
+            <p class="footer__year">&copy; 2023</p>
         </div>
         <div class="footer__socIcon">
             <img class="footer__img" src="./img/Google Plus.svg" alt="">

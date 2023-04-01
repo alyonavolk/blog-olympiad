@@ -46,6 +46,24 @@ body{
     margin: 0 auto;
     color: #262B31;
     background: #F6FAFB;
+    transition: all 2s ease;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #ebd2bd;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #d4b192;
+    border-radius: 20px;
+    outline: 1px solid #eee;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 .list-reset{
@@ -63,7 +81,13 @@ body{
 .scroll{
     margin: 0 70px 70px;
     max-width: 1200px;
+    cursor: pointer;
+    transition: opacity 0.4s linear;
 }
+.scroll:hover{
+    opacity: 0.4;
+}
+
 .main__title{
     max-width: 1200px;
     height: 68px;
@@ -80,15 +104,11 @@ body{
     line-height: 23px;
     color: #5E6668;
 }
-a.anchor{
-    position:absolute;
-    margin-top:-10px;
-    transition: position 0.4s;
-}
 
 .container{
     padding: 0 70px;
 }
+
 @media (max-width: 768px) {
     .container{
         padding: 0 50px;
@@ -97,6 +117,11 @@ a.anchor{
 @media (max-width: 568px) {
     .container{
         padding: 0 30px;
+    }
+}
+@media (max-width: 400px) {
+    .main__title{
+        font-size: 36px;
     }
 }
 
@@ -123,8 +148,17 @@ a.anchor{
     font-size: 20px;
     line-height: 23px;
 }
+
+.nav__item{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all .3s;
+}
 .nav__item:hover{
-    color: #D49C6B;
+    color: #5E6668;
+    background-size: 100% 2px;
 }
 
 @media (max-width: 768px) {
@@ -151,8 +185,8 @@ a.anchor{
     margin: 70px 0 20px 0;
 }
 
-.hero_left{
-    margin-left: 90px;
+.hero__content{
+    margin: 10px auto;
 }
 
 .hero__message{
@@ -187,23 +221,45 @@ a.anchor{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.hero_right{
-    margin-right: 90px;
+.message__socIcon img{
+    cursor: pointer;
+    transition: opacity 0.6s linear;
 }
-.hero_right img{
-    width: 100%;
+.message__socIcon img:hover{
+    opacity: 0.4;
 }
 
-@media (max-width: 768px) {
-    .hero{
-        gap: 20px;
+.hero__image{
+    margin: 20px auto;
+    width: 35%;
+    min-width: 300px;
+    height: 350px;
+    animation: move 10s ease-in-out infinite;
+    position: relative;
+    transition: all 1s ease-in-out;
+    background: url('../img/pana.png');
+    border: 3px solid #D49C6B;
+}
+
+@keyframes move {
+    0% { 
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
-    .hero_left{
-        margin: 0 auto;
+    50% { 
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
-    .hero_right{
-        margin: 0 auto;
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+@media (max-width: 400px) {
+    .message__title{
+        font-size: 42px;
+    }
+    .hero__image{
+        min-width: 250px;
+        height: 300px;
     }
 }
 
@@ -303,7 +359,7 @@ a.anchor{
 }
 
 .direction__content{
-    margin: 40px 110px 0;
+    margin: 40px 10% 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -365,15 +421,16 @@ a.anchor{
 .arrow {
     cursor: pointer;
     width: auto;
-    transition: 0.6s ease;
+    transition: all 0.6s ease;
     user-select: none;
 }
 .arrow img{
+    transition: background-color 0.2s linear;
     width: 40px;
+    border-radius: 100%;
 }
 .arrow img:hover{
     background-color: #D49C6B;
-    border-radius: 100%;
 }
 
 .fade {
@@ -393,12 +450,17 @@ a.anchor{
 }
 @media (max-width: 568px) {
     .direction__content{
-        margin: 40px 20px 0;
+        margin: 40px 10px 0;
+    }
+    .achievements{
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 }
 
 /*separator*/
-.separator{
+.separator img{
+    overflow: hidden;
     width: 100%;
 }
 
@@ -417,13 +479,29 @@ a.anchor{
     font-size: 36px;
     line-height: 42px;
     padding: 30px 0 10px 0;
-}
+} 
 
 .contact__email{
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
+    cursor: pointer;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all .5s;
+}
+
+.contact__email:hover{
+    background-size: 100% 2px;
+}
+
+@media (max-width: 400px) {
+    .contact__tel{
+        font-size: 28px;
+    }
 }
 
 /*footer*/
@@ -448,6 +526,14 @@ a.anchor{
     flex-wrap: wrap;
     cursor: pointer;
     gap: 30px;
+}
+
+.footer__socIcon img {
+    cursor: pointer;
+    transition: opacity 0.4s linear;
+}
+.footer__socIcon img:hover {
+    opacity: 0.4;
 }
 
 .footer__img{
