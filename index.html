@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение шрифта  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Подключение стилей CSS -->
     <link rel="stylesheet" href="./style/style.css">
+    <!-- Подключение JavaScript -->
     <script defer src="./js/main.js"></script>
     <title>Blog</title>
 </head>
 <body class="hidden">
+    <!-- Шапка сайта -->
     <header class="header">
         <div class="header__logo">
             <img src="./img/logo.svg" alt="">
@@ -25,9 +29,10 @@
         </nav>
     </header>
     <main class="main">
-        <section class="hero container">
-            <div class="hero__content">
-                <div class="hero__message">
+        <!-- Ознакомительный раздел -->
+        <section class="info container">
+            <div class="info__content">
+                <div class="info__message">
                     <p class="message__descr_hello">
                         Привет,
                     </p>
@@ -44,7 +49,7 @@
                     <img src="./img/WhatsApp.svg" alt="">
                 </div>
             </div>
-            <div class="hero__image">
+            <div class="info__image">
                 ⠀
             </div>
         </section>
@@ -53,6 +58,7 @@
                 <img src="./img/scroll.svg" alt="">
             </a>
         </div>
+        <!-- Раздел Обо мне -->
         <section class="about container" id="about">
             <h2 class="main__title">Обо мне</h2>
             <div class="about__content">
@@ -80,6 +86,7 @@
                 </div>
             </div>
         </section>
+        <!-- Раздел направлений -->
         <section class="direction container" id="direction">
             <h2 class="main__title">Направление</h2>
             <div class="direction__content">
@@ -125,6 +132,7 @@
                 </div>
             </div>
         </section>
+        <!-- Контактная информация -->
         <div class="separator">
             <img src="./img/separator.svg" alt="">
         </div>
@@ -134,6 +142,7 @@
             <p class="contact__email">abc@gmail.com</p>
         </section>
     </main>
+    <!-- Подвал сайта -->
     <footer class="footer">
         <div class="footer__logo">
             <img src="./img/logo.svg" alt="">
